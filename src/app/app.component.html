@@ -1,5 +1,6 @@
+<div *ngIf="actividades.length == 1" class="spin"></div>
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <div class="tableCard">
+  <div *ngIf="actividades.length != 1"  class="tableCard">
     <div class="tableHeader">
       <span style="min-width: 210px;">Usuario</span>
       <span style="min-width: 210px;">Actividades</span>
