@@ -1,9 +1,9 @@
-<div *ngIf="actividades.length == 1" class="spin"></div>
+<div *ngIf="actividades.length == 0" class="spin"></div>
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <div *ngIf="actividades.length != 1" class="tableCard" style="position: relative;">
-    <form #searchbar="ngForm" (ngSubmit)="onClickSubmit(searchbar.value)"
+  <div *ngIf="actividades.length != 0" class="tableCard" style="position: relative;">
+    <div 
       style="position: absolute; color: red; z-index: 9; top: 21px; right: 35px;">
-      <input type="text" name="query" required="" placeholder="Buscar..." ngmodel style="
+      <input type="text" name="query" required="" placeholder="Buscar..." [(ngModel)]="searchInput" style="
       margin-right: 14px;
       padding: 10px 0;
       border-bottom: 2px solid #70707049;
@@ -14,8 +14,8 @@
       background-color: transparent;
       font-size: 16px;
       color: #707070;">
-      <span style="cursor: pointer;" (click)="onClickSubmit(searchbar.value)">🔎</span>
-    </form>
+      <span style="cursor: pointer;" (click)="onClickSubmit()">🔎</span>
+  </div>
     <div class="tableHeader">
       <span style="min-width: 210px;">Usuario</span>
       <span style="min-width: 210px;">Actividades</span>
