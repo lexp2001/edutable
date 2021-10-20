@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
 import { ActivityService } from 'src/app/services/activity.service';
 import { Activity } from './interfaces/activity.interface';
 
@@ -284,6 +285,11 @@ export class AppComponent implements OnInit {
         this.actividades = data
         console.log(this.actividades)
       })
+  }
+
+  onClickSubmit(data: Data) {
+    let searchTerm = data.query
+    console.log(searchTerm)
   }
 
   ngOnInit(): void {
