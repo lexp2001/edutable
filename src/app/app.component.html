@@ -4,25 +4,26 @@
     <div style="position: absolute; z-index: 9; top: 28px; right: 280px;">
 
       <div style="display: flex; color: #707070;  font-size: 14px;">
-          <label style="margin-right: 7px;">
-            <input name="radio" type="radio" checked="" value="">
-            <span>Nombre</span>
-          </label>
-          <label style="margin-right: 7px;">
-            <input name="radio" type="radio" value="">
-            <span>Rut</span>
-          </label>
-          <label style="margin-right: 7px;">
-            <input name="radio" type="radio" value="">
-            <span>Empresa</span>
-          </label>
-        </div>
+        <label style="margin-right: 7px;">
+          <input name="radio" type="radio" checked="" value="">
+          <span>Nombre</span>
+        </label>
+        <label style="margin-right: 7px;">
+          <input name="radio" type="radio" value="">
+          <span>Rut</span>
+        </label>
+        <label style="margin-right: 7px;">
+          <input name="radio" type="radio" value="">
+          <span>Empresa</span>
+        </label>
+      </div>
 
     </div>
 
     <div style="position: absolute; z-index: 9; top: 7px; right: 35px;">
 
-      <input type="text" name="query" required="" placeholder="Buscar..." [(ngModel)]="searchInput" style="
+      <input type="text" name="query" required="" placeholder="Buscar..." [(ngModel)]="searchInput"
+        (keyup.enter)="onClickSubmit()" style="
       margin-right: 14px;
       padding: 10px 0;
       border-bottom: 2px solid #70707049;
