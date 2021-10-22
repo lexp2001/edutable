@@ -1,8 +1,27 @@
 <div *ngIf="actividades.length == 0" class="spin"></div>
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
   <div *ngIf="actividades.length != 0" class="tableCard" style="position: relative;">
-    <div 
-      style="position: absolute; color: red; z-index: 9; top: 21px; right: 35px;">
+    <div style="position: absolute; z-index: 9; top: 28px; right: 280px;">
+
+      <div style="display: flex; color: #707070;  font-size: 14px;">
+          <label style="margin-right: 7px;">
+            <input name="radio" type="radio" checked="" value="">
+            <span>Nombre</span>
+          </label>
+          <label style="margin-right: 7px;">
+            <input name="radio" type="radio" value="">
+            <span>Rut</span>
+          </label>
+          <label style="margin-right: 7px;">
+            <input name="radio" type="radio" value="">
+            <span>Empresa</span>
+          </label>
+        </div>
+
+    </div>
+
+    <div style="position: absolute; z-index: 9; top: 7px; right: 35px;">
+
       <input type="text" name="query" required="" placeholder="Buscar..." [(ngModel)]="searchInput" style="
       margin-right: 14px;
       padding: 10px 0;
@@ -15,7 +34,8 @@
       font-size: 16px;
       color: #707070;">
       <span style="cursor: pointer;" (click)="onClickSubmit()">🔎</span>
-  </div>
+    </div>
+
     <div class="tableHeader">
       <span style="min-width: 210px;">Usuario</span>
       <span style="min-width: 210px;">Actividades</span>
