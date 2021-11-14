@@ -57,31 +57,40 @@
                         <div>finalziadas</div>
                         <div style="font-size: 21px; font-weight: 600; opacity: .77;">14</div>
                     </div>
-                    <div></div>
                 </span>
             </div>
             <div style="display: flex;">
-                <span class="mr28 smallCardBase">Usuarios shopper</span>
+                <span class="mr28 smallCardBase" style="flex: 2;">Usuarios Shopper</span>
                 <span class="smallCardBase">Promedio de acierto por actividad</span>
             </div>
         </span>
-        <span class="smallCardBase" style="min-width: 350px;">
+        <span class="smallCardBase" style="min-width: 350px; padding: 21px 35px;">
             <div style="margin-bottom: 21px; display: flex; justify-content: space-between;">
                 <span>Mejores jugadores</span>
                 <span>Esta semana</span>
             </div>
-            <div *ngFor="let item of [].constructor(10)"
-                style="margin-bottom: 21px; display: flex; justify-content: space-between; font-weight: 600; color: #00000070;">
-                <span>
-                    <span style="margin-right: 28px;">#1</span>
-                    <span>Alejandro Arienda</span>
-                </span>
-                <span>4.9</span>
-            </div>
-            <hr style="width: 100%; border: solid 1px #70707021;">
-            <div>
-                <div *ngFor="let item of [].constructor(15)" style="font-size: 14px;">#11 Celia Cruz, 3.2</div>
+            <div style="overflow-y: auto; overflow-x: hidden; padding-right: 28px;">
+                <div *ngFor="let item of [].constructor(10), let top10Index = index"
+                    style="margin-bottom: 21px; display: flex; justify-content: space-between; font-weight: 600; color: #00000070;">
+                    <span>
+                        <span style="margin-right: 28px;">#{{top10Index+1}}</span>
+                        <span>Alejandro Arienda</span>
+                    </span>
+                    <span>
+                        <span style="color: gold">★ </span>
+                        <span>4.9</span>
+                    </span>
+                </div>
+                <hr style="width: 100%; border: solid 1px #70707021; margin-bottom: 21px;">
+                <div>
+                    <span *ngFor="let item of [].constructor(15), let top25Index = index"
+                        style="font-size: 14px; width: 50%; display: block; float: left; margin-bottom: 7px">
+                        <span style="margin-right: 7px;">#{{top25Index+11}}</span>
+                        <span>Celia Cruz, 3.2</span>
+                    </span>
+                </div>
             </div>
         </span>
+
     </div>
 </div>
