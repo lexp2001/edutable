@@ -1,1 +1,87 @@
-<p>dashboard works!</p>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh; color: #707070;">
+    <div class="bodyCard" style="display: flex; padding: 35px;">
+
+        <span class="mr28" style="display: flex; flex-direction: column;">
+            <div class="mb28" style="display: flex;">
+                <span class="mr28">
+                    <div class="mb28 smallCardBase"
+                        style="background-color: #B29DFF; color: white; justify-content: space-around;">
+                        <div style="font-size: 21px;">
+                            👔 Empresa
+                        </div>
+                        <div>
+                            General
+                        </div>
+                    </div>
+                    <div class="smallCardBase"
+                        style="background-color: #76BEE4; color: white; flex-direction: row; align-items: center;">
+                        <span style="font-size: 63px; margin-right: 7px;">📋</span>
+                        <span>
+                            <div style="font-size: 14px; margin-bottom: 3px;">700 registros</div>
+                            <div style="font-size: 18px; font-weight: 600;">Ver tabla</div>
+                        </span>
+                    </div>
+                </span>
+                <span class="mr28">
+                    <div class="mb28 smallCardBase"
+                        style="flex-direction: row; justify-content: space-around; align-items: center;">
+                        <span class="coloredCircle" style="background-color: #76BEE435;">350</span>
+                        <span>
+                            <div>
+                                Usuarios
+                            </div>
+                            <div>
+                                en total
+                            </div>
+                        </span>
+                    </div>
+                    <div class="smallCardBase"
+                        style="flex-direction: row; justify-content: space-around; align-items: center;">
+                        <span class="coloredCircle" style="background-color: #B29DFF35;">140</span>
+                        <span>
+                            <div>Personas</div>
+                            <div>aprobadas</div>
+                            <div style="margin-top: 7px; font-size: 14px;">(77%)</div>
+                        </span>
+                    </div>
+                </span>
+                <span class="smallCardBase">
+                    <div style="margin-bottom: 14px;">Personas registradas</div>
+                    <div class="coloredRectangle" style="background-color: #B29DFF35; margin-bottom: 14px;">
+                        <div>Con actividades</div>
+                        <div>finalizadas</div>
+                        <div style="font-size: 21px; font-weight: 600; opacity: .77;">77</div>
+                    </div>
+                    <div class="coloredRectangle" style="background-color: #76BEE435;">
+                        <div>Sin actividades</div>
+                        <div>finalziadas</div>
+                        <div style="font-size: 21px; font-weight: 600; opacity: .77;">14</div>
+                    </div>
+                    <div></div>
+                </span>
+            </div>
+            <div style="display: flex;">
+                <span class="mr28 smallCardBase">Usuarios shopper</span>
+                <span class="smallCardBase">Promedio de acierto por actividad</span>
+            </div>
+        </span>
+        <span class="smallCardBase" style="min-width: 350px;">
+            <div style="margin-bottom: 21px; display: flex; justify-content: space-between;">
+                <span>Mejores jugadores</span>
+                <span>Esta semana</span>
+            </div>
+            <div *ngFor="let item of [].constructor(10)"
+                style="margin-bottom: 21px; display: flex; justify-content: space-between; font-weight: 600; color: #00000070;">
+                <span>
+                    <span style="margin-right: 28px;">#1</span>
+                    <span>Alejandro Arienda</span>
+                </span>
+                <span>4.9</span>
+            </div>
+            <hr style="width: 100%; border: solid 1px #70707021;">
+            <div>
+                <div *ngFor="let item of [].constructor(15)" style="font-size: 14px;">#11 Celia Cruz, 3.2</div>
+            </div>
+        </span>
+    </div>
+</div>
