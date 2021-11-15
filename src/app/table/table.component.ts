@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Activity } from '../interfaces/activity.interface';
 import { ActivityService } from '../services/activity.service';
 
@@ -13,7 +14,10 @@ export class TableComponent implements OnInit {
   public todasAct: Activity[] = []
   public searchInput = ""
 
-  constructor(public activityService: ActivityService) { }
+  constructor(
+    private activityService: ActivityService,
+    private router: Router
+  ) { }
 
   getActivities() {
     this.activityService.getActivities()
@@ -34,6 +38,10 @@ export class TableComponent implements OnInit {
       )
     })
     console.log(this.actividades)
+  }
+
+  onClickGoToDashboard() {
+    this.router.navigate(['dashboard'])
   }
 
   ngOnInit(): void {

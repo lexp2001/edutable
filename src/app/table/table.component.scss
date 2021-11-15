@@ -1,0 +1,65 @@
+.🔎 {
+    margin-right      : 14px;
+    padding           : 10px 0;
+    border-bottom     : 2px solid #70707049;
+    outline           : none;
+    border-top-style  : hidden;
+    border-right-style: hidden;
+    border-left-style : hidden;
+    background-color  : transparent;
+    font-size         : 16px;
+    color             : #707070;
+}
+
+.tableHeader {
+    display     : flex;
+    position    : sticky;
+    top         : 0;
+    margin-top  : -1px;
+    margin-right: 17px;
+    padding     : 21px 0;
+    border      : unset;
+
+}
+
+.rowContainer {
+    display      : flex;
+    padding      : 35px 0 7px 0;
+    border-bottom: solid 1px #70707049;
+}
+
+.productContainer {
+    margin-left    : 14px;
+    border         : 1px solid #70707049;
+    border-radius  : 14px;
+    padding        : 7px;
+    min-width      : 91px;
+    font-weight    : 200;
+    //max-height   : 90px;
+
+    * {
+        //margin-bottom: 3px;
+    }
+}
+
+.📜 {
+    max-height   : 84%;
+    overflow-y   : auto;
+    overflow-x   : hidden;
+    font-size    : 15px;
+    padding-right: 21px;
+    margin-right : 7px;
+}
+
+// The next few lines add a padding to all elements with the class rowContainer EXCEPT for the first one
+.📜>.rowContainer {
+    padding-top: unset;
+}
+.📜>.rowContainer~.rowContainer {
+    padding-top: 35px;
+}
+
+.💪🏻 {
+    display        : flex;
+    justify-content: space-between;
+}
