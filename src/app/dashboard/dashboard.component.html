@@ -10,11 +10,16 @@
                             👔 Empresa
                         </div>
                         <div>
-                            General
+                            <select style="color: white;">
+                                <option>Empresa 1</option>
+                                <option>Empresa 2</option>
+                                <option>Empresa 3</option>
+                                <option>Empresa 4</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="smallCardBase"
-                        style="background-color: #76BEE4; color: white; flex-direction: row; align-items: center;">
+                    <div class="smallCardBase" (click)="onClickGoToTable()"
+                        style="background-color: #76BEE4; color: white; flex-direction: row; align-items: center; cursor: pointer;">
                         <span style="font-size: 63px; margin-right: 7px;">📋</span>
                         <span>
                             <div style="font-size: 14px; margin-bottom: 3px;">700 registros</div>
@@ -24,7 +29,7 @@
                 </span>
                 <span class="mr28">
                     <div class="mb28 smallCardBase"
-                        style="flex-direction: row; justify-content: space-around; align-items: center;">
+                        style="flex-direction: row; justify-content: space-between; align-items: center;">
                         <span class="coloredCircle" style="background-color: #76BEE435;">350</span>
                         <span>
                             <div>
@@ -36,7 +41,7 @@
                         </span>
                     </div>
                     <div class="smallCardBase"
-                        style="flex-direction: row; justify-content: space-around; align-items: center;">
+                        style="flex-direction: row; justify-content: space-between; align-items: center;">
                         <span class="coloredCircle" style="background-color: #B29DFF35;">140</span>
                         <span>
                             <div>Personas</div>
@@ -60,14 +65,25 @@
                 </span>
             </div>
             <div style="display: flex;">
-                <span class="mr28 smallCardBase" style="flex: 2;">Usuarios Shopper</span>
+                <span class="mr28 smallCardBase" style="flex: 2; min-height: 280px;">
+                    <div>Usuarios Shopper</div>
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </span>
                 <span class="smallCardBase">Promedio de acierto por actividad</span>
             </div>
         </span>
         <span class="smallCardBase" style="min-width: 350px; padding: 21px 35px;">
             <div style="margin-bottom: 21px; display: flex; justify-content: space-between;">
                 <span>Mejores jugadores</span>
-                <span>Esta semana</span>
+                <span>
+                    <select style="color: #70707084; font-size: 15px;">
+                        <option>Esta semana</option>
+                        <option>15 días</option>
+                        <option>30 días</option>
+                    </select>
+                </span>
             </div>
             <div style="overflow-y: auto; overflow-x: hidden; padding-right: 28px;">
                 <div *ngFor="let item of [].constructor(10), let top10Index = index"
