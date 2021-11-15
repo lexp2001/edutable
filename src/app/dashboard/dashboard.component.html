@@ -92,10 +92,10 @@
             </div>
             <div style="overflow-y: auto; overflow-x: hidden; padding-right: 28px;">
                 <div *ngFor="let item of [].constructor(10), let top10Index = index"
-                    style="margin-bottom: 21px; display: flex; justify-content: space-between; font-weight: 600; color: #00000070;">
-                    <span>
+                    style="margin-bottom: 21px; display: flex; font-weight: 600; color: #00000070;">
+                    <span style="display: flex; width: 80%; max-width: 350px;">
                         <span style="margin-right: 28px;">#{{top10Index+1}}</span>
-                        <span>Alejandro Arienda</span>
+                        <span class="top10Name">Alejandro Arienda Almeida Ancora</span>
                     </span>
                     <span>
                         <span style="color: gold">★ </span>
@@ -103,13 +103,15 @@
                     </span>
                 </div>
                 <hr style="width: 100%; border: solid 1px #70707021; margin-bottom: 21px;">
-                <div>
-                    <span *ngFor="let item of [].constructor(15), let top25Index = index"
-                        style="font-size: 14px; width: 50%; display: block; float: left; margin-bottom: 7px">
-                        <span style="margin-right: 7px;">#{{top25Index+11}}</span>
-                        <span>Celia Cruz, 3.2</span>
+                <span *ngFor="let item of [].constructor(15), let top25Index = index" class="top25Span">
+                    <span class="top25NumberAndNameContainer">
+                        <span style="margin-right: 14px; font-size: 12px; opacity: .49;">#{{top25Index+11}}</span>
+                        <span class="top25Name">Sebastián Senecca Siria Sésamo Soares</span>
+                        <!-- <div id="a">Div A</div>
+                        <div id="b">Div B</div> -->
                     </span>
-                </div>
+                    <span class="top25Points">3.2</span>
+                </span>
             </div>
         </span>
 

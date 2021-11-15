@@ -1,9 +1,9 @@
 select {
-    width           : 100%;
-    background-color: transparent;
-    border          : none;
+    width             : 100%;
+    background-color  : transparent;
+    border            : none;
     //color           : white;
-    font-size       : 16px;
+    font-size         : 16px;
 }
 
 option {
@@ -54,4 +54,79 @@ option {
     border-radius   : 14px;
     background-color: black;
     font-size       : 14px;
+}
+
+.top10Name {
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+}
+
+.top25Span {
+    display          : flex;
+    justify-content  : space-between;
+    margin-bottom    : 7px;
+    // overflow: hidden;
+    //width          : 50%;
+    float            : left;
+    font-size        : 14px;
+
+    .top25NumberAndNameContainer {
+        display  : flex;
+        max-width: calc(100% - 21px);
+
+        .top25Name {
+            padding-right: 7px;
+            white-space  : nowrap;
+            overflow     : hidden;
+            text-overflow: ellipsis;
+            //width        : 100%;
+        }
+
+        .top25Name:hover {
+            // overflow: visible;
+        }
+    }
+
+    .top25NumberAndNameContainer:hover~.top25Points {
+        //display: none;
+    }
+
+    .top25Points {
+        min-width: 21px;
+        max-width: 21px;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 1399px) {
+    .top25Span {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1649px) {
+    .top25Span {
+        width       : 45%;
+        margin-right: 5%;
+
+        .top25Points {
+            // color: red;
+        }
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    .top25Span {
+        width       : 28%;
+        margin-right: 5%;
+
+        .top25Points {
+            // color: red;
+        }
+    }
+}
+
+#a:hover~#b {
+    background: #ccc
 }
