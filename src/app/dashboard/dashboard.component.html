@@ -68,14 +68,14 @@
                 <span class="mr28 smallCardBase" style="flex: 2; min-height: 280px;">
                     <div class="mb28">Usuarios Shopper</div>
                     <div style="height: 100%;">
-                        <!-- <canvas id="barChart"></canvas> -->
-                        <apx-chart [series]="series" [chart]="chart" [title]="title" [plotOptions]="plotOptions"></apx-chart>
+                        <canvas id="barChart"></canvas>
                     </div>
                 </span>
                 <span class="smallCardBase">
                     <div class="mb28">Promedio de acierto por actividad</div>
                     <div style="height: 100%">
-                        <canvas id="lineChart"></canvas>
+                        <!-- <canvas id="lineChart"></canvas> -->
+                        <apx-chart [series]="series" [chart]="chart" [title]="title" [plotOptions]="plotOptions"></apx-chart>
                     </div>
                 </span>
             </div>
@@ -95,7 +95,7 @@
                 <div *ngFor="let item of [].constructor(10), let top10Index = index"
                     style="margin-bottom: 21px; display: flex; font-weight: 600; color: #00000070;">
                     <span style="display: flex; width: 80%; max-width: 350px;">
-                        <span style="margin-right: 28px;">#{{top10Index+1}}</span>
+                        <span style="margin-right: 28px; min-width: 25px;">#{{top10Index+1}}</span>
                         <span class="top10Name">Alejandro Arienda Almeida Ancora</span>
                     </span>
                     <span>
