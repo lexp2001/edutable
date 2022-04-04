@@ -32,9 +32,9 @@ export class TableComponent implements OnInit {
     console.log(this.searchInput)
     this.actividades = this.todasAct.filter(f => {
       return (
-        f.rut.includes(this.searchInput) ||
-        f.nombre.includes(this.searchInput) ||
-        f.empresa.includes(this.searchInput)
+        f.Rut.includes(this.searchInput) ||
+        f.Nombre.includes(this.searchInput) ||
+        f.Empresa.includes(this.searchInput)
       )
     })
     console.log(this.actividades)
